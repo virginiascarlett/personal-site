@@ -5,15 +5,6 @@
 #826b5d brown
 */
 
-/* OLD palette
-#c7cdd0 light gray
-#1c2426 nearly black
-#525150 dark gray
-#767e4d dark green
-##949E60 light green
-#725744 brown
-*/
-
 /* GLOBAL STYLES
 --------------------------------------*/
 
@@ -23,11 +14,15 @@
 html {
     box-sizing: border-box;
 }
-*, *:before, *:after {
-box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -37,70 +32,82 @@ body {
     margin: 0;
     font-family: 'OpenSans', 'sans-serif';
 }
+
 h1 {
     font-family: 'Norwester', 'sans-serif';
     font-size: 4rem;
     line-height: 0.8;
     letter-spacing: 0.2rem;
 }
-@media screen and (max-width: 651px){
+
+@media screen and (max-width: 651px) {
     h1 {
         line-height: 1;
         font-size: 3rem;
     }
+
     h2 {
         font-size: 1rem;
     }
 }
+
 h2 {
     font-family: 'CooperHewitt', 'sans-serif';
     font-size: 2rem;
     padding-top: 0;
 }
+
 h3 {
     font-family: 'CooperHewitt', 'sans-serif';
-    font-size: 1.75rem; 
+    font-size: 1.75rem;
 }
+
 footer a {
-    color:#c7cdd0;
+    color: #c7cdd0;
 }
 
 .btn {
-    background:#767e4d;
-    color:#c7cdd0;
+    background: #767e4d;
+    color: #c7cdd0;
     text-decoration: none;
     padding: 7px;
     border-radius: 4px;
     font-size: 1.2rem;
 }
+
 .content-wrapper {
     margin: 0 auto;
     padding: 30px;
     max-width: 900px;
 }
-@media screen and (max-width: 651px){
+
+@media screen and (max-width: 651px) {
     .content-wrapper {
         padding: 5px 30px;
     }
 }
+
 /* links */
 a {
-    color:#767e4d;
+    color: #767e4d;
 }
 
 a:hover {
-    color:#949E60;
+    color: #949E60;
     text-decoration: none;
 }
+
 /* fonts */
 @font-face {
     font-family: 'Norwester';
     src: url(../fonts/norwester/norwester.otf) format('opentype');
 }
+
 @font-face {
     font-family: 'CooperHewitt';
     src: url(../fonts/cooperhewitt/CooperHewitt-Book.otf) format('opentype');
 }
+
 @font-face {
     font-family: 'OpenSans';
     src: url(../fonts/open-sans-fontfacekit/webfonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff) format('woff');
@@ -118,16 +125,72 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
+
 .home h1 {
     margin-top: 1.5rem;
 }
+
 .home .content-wrapper {
     flex: 1 0 auto;
 }
+
 .content-bg {
     /* background: rgb(199 205 208 / 0.9); */
-    background: #c3c8d7f2; /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
+    background: #c3c8d7f2;
+    /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
     padding: 30px;
+}
+
+
+/* PROJECTS
+--------------------------------------*/
+.projects header::before {
+    background: url(../images/pexels-eddson-lens.jpg);
+    background-position: 50% 10%;
+    background-size: cover;
+    content: "";
+    height: 375px;
+    display: block;
+}
+
+@media screen and (max-width: 651px) {
+    .projects header::before {
+        height: 200px;
+    }
+}
+
+.projects .content-wrapper {
+    margin-bottom: 0;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-block: 1rem;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .project-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+.project-item img {
+    width: 100%;
+}
+
+.project-item h3 {
+    margin-top: 0
 }
 
 /* RESUME
@@ -136,69 +199,47 @@ a:hover {
     /* background: url(../images/bg-home-office-city.jpg); */
     background: url(../images/pexels-eddson-lens.jpg);
     background-position: 50% 10%;
-    background-size: cover; 
+    background-size: cover;
     content: "";
     height: 375px;
     display: block;
 }
+
 @media screen and (max-width: 651px) {
     .resume header::before {
         height: 200px;
     }
 }
+
 .resume .content-wrapper {
     margin-bottom: 0;
 }
+
 .resume header .content-wrapper {
     padding-bottom: 0;
 }
+
 .resume-section {
     margin-bottom: 50px
 }
+
 .resume-section h2 {
     padding-bottom: 0.5rem;
     border-bottom: 2px dashed #1c2426;
 }
+
 .download-link {
     position: fixed;
     top: 5px;
     left: 5px;
     font-size: 1.4rem;
 }
-@media screen and (max-width: 1400px){
+
+@media screen and (max-width: 1400px) {
     .download-link {
         position: absolute;
     }
 }
-
-/* Projects
---------------------------------------*/
-.project-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    padding-block: 1rem;
-}
-.project-item {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    align-items: start;
-    column-gap: 20px;
-}
-@media screen and (max-width: 800px){
-    .project-item {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-.project-item img {
-    width: 100%;
-}
-.project-item h3 {
-    margin-top: 0
-}
-
 
 /* Work Experience
 --------------------------------------*/
@@ -208,11 +249,13 @@ a:hover {
     gap: 1rem;
     padding-block: 1rem;
 }
+
 .work-item {
     display: grid;
     grid-template-columns: 300px 1fr;
     column-gap: 20px;
 }
+
 @media screen and (max-width: 670px) {
     .work-item {
         display: flex;
@@ -220,9 +263,11 @@ a:hover {
         gap: 1rem;
     }
 }
+
 .work-item h3 {
     margin: 0;
 }
+
 .work-item ul {
     margin-top: 0;
 }
@@ -235,16 +280,18 @@ a:hover {
     gap: 1rem;
     padding-block: 0.5rem;
 }
+
 /* .education-item {
     line-height: 0.5;
 } */
- .education-item h3 {
+.education-item h3 {
     margin: 0;
     padding: 0;
- }
- .education-item p {
+}
+
+.education-item p {
     margin-top: 0.5rem;
- }
+}
 
 
 /* FOOTER
@@ -253,6 +300,7 @@ footer {
     background: #1c2426;
     color: #c7cdd0;
 }
+
 @media screen and (min-width: 651px) {
     footer {
         display: flex;
@@ -260,24 +308,28 @@ footer {
         padding: 0 20px;
     }
 }
+
 @media screen and (max-width: 650px) {
     footer {
         text-align: center;
         padding: 10px;
     }
 }
+
 .socials {
     list-style-type: none;
     padding: 0;
 }
+
 .socials li {
     display: inline-block;
     margin-left: 10px;
 }
+
 .socials img {
     width: 32px;
-
 }
+
 .socials img:hover {
     opacity: 0.5;
 }
