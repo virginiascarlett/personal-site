@@ -27,7 +27,6 @@ body {
 }
 
 body {
-    /* background: #c7cdd0; */
     background: #c3c8d7;
     margin: 0;
     font-family: 'OpenSans', 'sans-serif';
@@ -97,6 +96,26 @@ a:hover {
     text-decoration: none;
 }
 
+/* nav bar */
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-bar {
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    background-color: #c3c8d7;
+}
+.nav-bar ul {
+    display: flex;
+    list-style: none; /* Removes the default bullet points */
+    padding-left: 0; /* Removes default padding */
+    gap: 2.5rem;
+}
+.nav-bar ul li {
+    font-size: 1.2rem;
+}
+
 /* fonts */
 @font-face {
     font-family: 'Norwester';
@@ -118,7 +137,6 @@ a:hover {
 /* HOME
 --------------------------------------*/
 .home {
-    /* background: url(../images/bg-home-office-city.jpg) no-repeat; */
     background: url(../images/pexels-eddson-lens.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -144,7 +162,14 @@ a:hover {
 
 /* PROJECTS
 --------------------------------------*/
-.projects header::before {
+.header-img {
+    background: url(../images/pexels-eddson-lens.jpg);
+    height: 375px;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .projects header::before {
     background: url(../images/pexels-eddson-lens.jpg);
     background-position: 50% 10%;
     background-size: cover;
@@ -157,7 +182,7 @@ a:hover {
     .projects header::before {
         height: 200px;
     }
-}
+} */
 
 .projects .content-wrapper {
     margin-bottom: 0;
@@ -195,21 +220,14 @@ a:hover {
 
 /* RESUME
 --------------------------------------*/
-.resume header::before {
-    /* background: url(../images/bg-home-office-city.jpg); */
+.header-img {
     background: url(../images/pexels-eddson-lens.jpg);
-    background-position: 50% 10%;
-    background-size: cover;
-    content: "";
     height: 375px;
-    display: block;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-@media screen and (max-width: 651px) {
-    .resume header::before {
-        height: 200px;
-    }
-}
+/* TODO: ^Make height smaller on smaller screens */
 
 .resume .content-wrapper {
     margin-bottom: 0;
