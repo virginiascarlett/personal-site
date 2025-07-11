@@ -1,5 +1,9 @@
 /* NEW palette
-#c3c8d7 gray
+#c3c8d7 core gray
+#e4e6ed light gray
+#adb4c7 darker gray
+#717682 dark gray
+
 #413d3f nearly black
 #8a474b red
 #826b5d brown
@@ -100,20 +104,33 @@ a:hover {
 .nav-wrapper {
     display: flex;
     justify-content: flex-end;
+    background-color: #e4e6ed;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.nav-wrapper h3 {
+  margin: 0;
+  padding: 0.2rem 0 0 0;
+  font-family: 'Norwester', 'sans-serif';
+  letter-spacing: 0.1rem;
 }
 .nav-bar {
     display: flex;
-    padding: 0.5rem 1.5rem;
-    background-color: #c3c8d7;
+    padding: 0;
 }
 .nav-bar ul {
     display: flex;
     list-style: none; /* Removes the default bullet points */
     padding-left: 0; /* Removes default padding */
-    gap: 2.5rem;
+    gap: 4rem;
+    line-height: 0.3rem;
 }
 .nav-bar ul li {
-    font-size: 1.2rem;
+    font-family: 'OpenSans', 'sans-serif';
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+    /* text-decoration: none; TODO: troubleshoot*/ 
 }
 
 /* fonts */
