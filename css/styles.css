@@ -153,27 +153,67 @@ a:hover {
 
 /* HOME
 --------------------------------------*/
+/* .home {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+} */
 .home {
     background: url(../images/pexels-eddson-lens.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
-    display: flex;
-    flex-direction: column;
+    min-height: 180vh;
+    background-attachment: fixed;
 }
 
-.home h1 {
-    margin-top: 1.5rem;
+.layer {
+    background-color: #e4e6ed80;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 215vh; /* eyeballing it */
 }
 
 .home .content-wrapper {
-    flex: 1 0 auto;
+    width: 50vw;
+    position: absolute;
+    bottom: -45vw; /* eyeballing it */
+    left: 25vw; /* (100 - box width) / 2 */
+}
+.home footer {
+    position: absolute;
+    bottom: -120vh; /*viewport height - footer height */
+}
+
+/* .hero {
+    background: url(../images/pexels-eddson-lens.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    min-height: 100vh;
+    flex: 0 0 auto;
+} */
+
+
+
+/* .home h1 {
+    margin-top: 1.5rem;
+} */
+
+.home-content-wrapper {
+    flex: 1 1 auto;
 }
 
 .content-bg {
-    /* background: rgb(199 205 208 / 0.9); */
     background: #c3c8d7f2;
     /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
     padding: 30px;
+    z-index: 1;
+    margin: -4rem auto 4rem;
+    position: relative;
+    padding: 2rem;
 }
 
 
@@ -334,6 +374,8 @@ a:hover {
 footer {
     background: #1c2426;
     color: #c7cdd0;
+    width: 100vw;
+    height: 60px;
 }
 
 @media screen and (min-width: 651px) {
