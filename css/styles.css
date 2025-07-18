@@ -153,28 +153,15 @@ a:hover {
 
 /* HOME
 --------------------------------------*/
-/* .home {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-} */
+
 .home {
-    background: url(../images/pexels-eddson-lens.jpg) no-repeat;
+    background: url(../images/pexels-eddson-lens-covered.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
     min-height: 180vh;
     background-attachment: fixed;
 }
 
-.layer {
-    background-color: #e4e6ed80;
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 215vh; /* eyeballing it */
-}
 
 .home .content-wrapper {
     width: 50vw;
@@ -187,23 +174,17 @@ a:hover {
     bottom: -120vh; /*viewport height - footer height */
 }
 
-/* .hero {
-    background: url(../images/pexels-eddson-lens.jpg) no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-    min-height: 100vh;
-    flex: 0 0 auto;
-} */
-
-
-
-/* .home h1 {
-    margin-top: 1.5rem;
-} */
-
-.home-content-wrapper {
-    flex: 1 1 auto;
+.hero-wrapper {
+    margin-top: 15rem;
+    background-color: #c1c3c7e6;
+    height: 20rem;
+}
+.hero-text {
+    font-family: 'Norwester', 'sans-serif';
+    font-size: 5rem;
+    text-align: center;
+    line-height: 0.9rem;
+    padding-top: 1rem;
 }
 
 .content-bg {
