@@ -168,7 +168,35 @@ a:hover {
     position: absolute;
     bottom: -45vw; /* eyeballing it */
     left: 25vw; /* (100 - box width) / 2 */
+    background-color: #c2c6d6e6; /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
 }
+
+.home .content-wrapper main p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-top:0;
+    padding-top:0;
+}
+
+.home-content-row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-shrink: 0;
+    overflow: auto; /* allow the flex container to grow to fit the item*/
+}
+
+.home-content-row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .home footer {
     position: absolute;
     bottom: -120vh; /*viewport height - footer height */
@@ -176,7 +204,7 @@ a:hover {
 
 .hero-wrapper {
     margin-top: 15rem;
-    background-color: #c1c3c7e6;
+    background-color: #d1d4e0e6;
     height: 20rem;
 }
 .hero-text {
@@ -187,15 +215,6 @@ a:hover {
     padding-top: 1rem;
 }
 
-.content-bg {
-    background: #c3c8d7f2;
-    /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
-    padding: 30px;
-    z-index: 1;
-    margin: -4rem auto 4rem;
-    position: relative;
-    padding: 2rem;
-}
 
 
 /* PROJECTS
