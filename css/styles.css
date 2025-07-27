@@ -1,10 +1,8 @@
-/* NEW palette
-#c3c8d7 core gray
-#e4e6ed light gray
-#adb4c7 darker gray
-#717682 dark gray
+/* Palette
+https://www.w3schools.com/colors/colors_picker.asp
 
-#413d3f nearly black
+#413d3f very dark gray
+#1a191a nearly black
 #8a474b red
 #826b5d brown
 */
@@ -91,28 +89,32 @@ footer a {
 }
 
 /* links */
-a {
-    color: #767e4d;
-}
-
-a:hover {
-    color: #949E60;
+/* a {
+    color: #413d3f;
     text-decoration: none;
-}
+} */
+
+/* a:hover {
+    color: #f0f1f5;
+} */
 
 /* nav bar */
 .nav-wrapper {
     display: flex;
     justify-content: flex-end;
-    background-color: #e4e6ed;
+    background-color: #d1d4e0;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
 }
 .nav-wrapper h3 {
-  margin: 0;
+  margin: 1rem 0;
   padding: 0.2rem 0 0 0;
   font-family: 'Norwester', 'sans-serif';
   letter-spacing: 0.1rem;
+}
+.nav-wrapper h3 a {
+    text-decoration: none;
+    color: #1a191a;
 }
 .nav-bar {
     display: flex;
@@ -122,16 +124,33 @@ a:hover {
     display: flex;
     list-style: none; /* Removes the default bullet points */
     padding-left: 0; /* Removes default padding */
-    gap: 4rem;
-    line-height: 0.3rem;
+    /* gap: 4rem; */
+    margin: 0;
+    /* line-height: 0.3rem; */
 }
 .nav-bar ul li {
     font-family: 'OpenSans', 'sans-serif';
-    font-size: 1.1rem;
-    margin: 0;
-    padding: 0;
-    /* text-decoration: none; TODO: troubleshoot*/ 
+    font-size: 1.3rem;
+    transition-duration: 250ms;
+    transition-property: background, color;
+    /* padding: 1rem; */
 }
+.nav-bar ul li:hover {
+    background: #8a474b;
+}
+.nav-bar ul li a {
+    /* By making the link a block item and
+    putting the padding here, I make the whole
+    box a clickable link, not just the text. */
+    display: block;
+    padding: 1rem;  
+    color: #413d3f;
+    text-decoration: none;
+}
+.nav-bar ul li:hover a {
+    color: #f0f1f5;
+}
+
 
 /* fonts */
 @font-face {
@@ -166,7 +185,7 @@ a:hover {
 .home .content-wrapper {
     width: 50vw;
     position: absolute;
-    bottom: -45vw; /* eyeballing it */
+    bottom: -50vw; /* eyeballing it */
     left: 25vw; /* (100 - box width) / 2 */
     background-color: #c2c6d6e6; /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
     display: flex;
@@ -193,8 +212,9 @@ a:hover {
 
 .home-content-row2 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .home footer {
