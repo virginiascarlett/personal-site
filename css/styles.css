@@ -5,6 +5,8 @@ https://www.w3schools.com/colors/colors_picker.asp
 #1a191a nearly black
 #8a474b red
 #826b5d brown
+#c3c8d7 light gray
+#f0f1f5 nearly white
 */
 
 /* GLOBAL STYLES
@@ -68,12 +70,19 @@ footer a {
 }
 
 .btn {
-    background: #767e4d;
-    color: #c7cdd0;
+    background: #8a474b;
+    color: #f0f1f5;
     text-decoration: none;
-    padding: 7px;
+    padding: 15px;
     border-radius: 4px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    transition-duration: 250ms;
+    transition-property: background, color;
+}
+.btn:hover {
+    background: #f0f1f5;
+    color: #8a474b;
 }
 
 .content-wrapper {
@@ -87,16 +96,6 @@ footer a {
         padding: 5px 30px;
     }
 }
-
-/* links */
-/* a {
-    color: #413d3f;
-    text-decoration: none;
-} */
-
-/* a:hover {
-    color: #f0f1f5;
-} */
 
 /* nav bar */
 .nav-wrapper {
@@ -124,16 +123,13 @@ footer a {
     display: flex;
     list-style: none; /* Removes the default bullet points */
     padding-left: 0; /* Removes default padding */
-    /* gap: 4rem; */
     margin: 0;
-    /* line-height: 0.3rem; */
 }
 .nav-bar ul li {
     font-family: 'OpenSans', 'sans-serif';
     font-size: 1.3rem;
     transition-duration: 250ms;
     transition-property: background, color;
-    /* padding: 1rem; */
 }
 .nav-bar ul li:hover {
     background: #8a474b;
