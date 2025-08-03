@@ -1,5 +1,6 @@
 /* Palette
 https://www.w3schools.com/colors/colors_picker.asp
+hexadecimal table for opacity https://davidwalsh.name/hex-opacity
 
 #413d3f very dark gray
 #1a191a nearly black
@@ -170,6 +171,8 @@ footer a {
 --------------------------------------*/
 
 .home {
+    --spacing: clamp(1rem, 2vw, 2.5rem);
+    --hero-padding: clamp(15rem, 50vw, 30rem);
     background: url(../images/pexels-eddson-lens-covered.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -177,32 +180,42 @@ footer a {
     background-attachment: fixed;
 }
 
+/* A box that takes up almost the whole page */
+.major-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: clamp(20rem, 120vw, 180rem);
+}
+
 .hero-wrapper {
-    margin-top: 15rem;
-    background-color: #d1d4e0e6;
-    height: 20rem;
+    padding-top: clamp(10rem, 25vw, 20rem);
 }
 .hero-text {
+    background-color: #d1d4e0e6;
     font-family: 'Norwester', 'sans-serif';
     font-size: 5rem;
     text-align: center;
     line-height: 0.9rem;
-    padding-top: 1rem;
+    display: block;
+    width: 100vw;
 }
 
-.home .content-wrapper {
-    width: 50vw;
-    position: absolute;
-    bottom: -50vw; /* eyeballing it */
-    left: 25vw; /* (100 - box width) / 2 */
-    background-color: #c2c6d6e6; /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
+.lower-content-big-wrapper {
+    max-width: 900px;
+    padding-bottom: clamp(10rem, 25vw, 20rem);
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 3rem;
 }
 
-.home .content-wrapper main p {
+.lower-content-close-wrapper {
+    background-color: #d1d4e0e6;
+    padding: 4rem;
+}
+
+.lower-content-close-wrapper p {
     font-size: 1.3rem;
     line-height: 2rem;
     margin-top:0;
@@ -227,7 +240,7 @@ footer a {
 
 .home footer {
     position: absolute;
-    bottom: -120vh; /*viewport height - footer height */
+    bottom: -120vh; /* viewport height - footer height */
 }
 
 
