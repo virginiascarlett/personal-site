@@ -12,7 +12,7 @@ https://www.w3schools.com/colors/colors_picker.asp
 /* GLOBAL STYLES
 --------------------------------------*/
 
-/* 
+/*
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
 html {
@@ -139,7 +139,7 @@ footer a {
     putting the padding here, I make the whole
     box a clickable link, not just the text. */
     display: block;
-    padding: 1rem;  
+    padding: 1rem;
     color: #413d3f;
     text-decoration: none;
 }
@@ -177,6 +177,18 @@ footer a {
     background-attachment: fixed;
 }
 
+.hero-wrapper {
+    margin-top: 15rem;
+    background-color: #d1d4e0e6;
+    height: 20rem;
+}
+.hero-text {
+    font-family: 'Norwester', 'sans-serif';
+    font-size: 5rem;
+    text-align: center;
+    line-height: 0.9rem;
+    padding-top: 1rem;
+}
 
 .home .content-wrapper {
     width: 50vw;
@@ -216,19 +228,6 @@ footer a {
 .home footer {
     position: absolute;
     bottom: -120vh; /*viewport height - footer height */
-}
-
-.hero-wrapper {
-    margin-top: 15rem;
-    background-color: #d1d4e0e6;
-    height: 20rem;
-}
-.hero-text {
-    font-family: 'Norwester', 'sans-serif';
-    font-size: 5rem;
-    text-align: center;
-    line-height: 0.9rem;
-    padding-top: 1rem;
 }
 
 
