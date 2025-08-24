@@ -1,12 +1,19 @@
 /* Palette
-https://www.w3schools.com/colors/colors_picker.asp
 
 #413d3f very dark gray
 #1a191a nearly black
 #8a474b red
 #826b5d brown
 #c3c8d7 light gray
+#e0e3eb lighter gray
 #f0f1f5 nearly white
+
+Color picker tool
+https://www.w3schools.com/colors/colors_picker.asp
+
+Hexadecimal table for opacity
+https://davidwalsh.name/hex-opacity
+
 */
 
 /* GLOBAL STYLES
@@ -16,231 +23,233 @@ https://www.w3schools.com/colors/colors_picker.asp
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+:root {
+  --very-light-gray: #e0e3eb;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background: #c3c8d7;
-    margin: 0;
-    font-family: 'OpenSans', 'sans-serif';
+  background: #c3c8d7;
+  margin: 0;
+  font-family: "OpenSans", "sans-serif";
 }
 
 h1 {
-    font-family: 'Norwester', 'sans-serif';
-    font-size: 4rem;
-    line-height: 0.8;
-    letter-spacing: 0.2rem;
+  font-family: "Norwester", "sans-serif";
+  font-size: 4rem;
+  line-height: 0.8;
+  letter-spacing: 0.2rem;
 }
 
 @media screen and (max-width: 651px) {
-    h1 {
-        line-height: 1;
-        font-size: 3rem;
-    }
+  h1 {
+    line-height: 1;
+    font-size: 3rem;
+  }
 
-    h2 {
-        font-size: 1rem;
-    }
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 h2 {
-    font-family: 'CooperHewitt', 'sans-serif';
-    font-size: 2rem;
-    padding-top: 0;
+  font-family: "CooperHewitt", "sans-serif";
+  font-size: 2rem;
+  padding-top: 0;
 }
 
 h3 {
-    font-family: 'CooperHewitt', 'sans-serif';
-    font-size: 1.75rem;
+  font-family: "CooperHewitt", "sans-serif";
+  font-size: 1.75rem;
 }
 
 footer a {
-    color: #c7cdd0;
+  color: #c7cdd0;
 }
 
 .btn {
-    background: #8a474b;
-    color: #f0f1f5;
-    text-decoration: none;
-    padding: 15px;
-    border-radius: 4px;
-    font-size: 1.3rem;
-    line-height: 2rem;
-    transition-duration: 250ms;
-    transition-property: background, color;
+  background: #8a474b;
+  color: #f0f1f5;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  transition-duration: 250ms;
+  transition-property: background, color;
 }
 .btn:hover {
-    background: #f0f1f5;
-    color: #8a474b;
+  background: #f0f1f5;
+  color: #8a474b;
 }
 
 .content-wrapper {
-    margin: 0 auto;
-    padding: 30px;
-    max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 900px;
 }
 
 @media screen and (max-width: 651px) {
-    .content-wrapper {
-        padding: 5px 30px;
-    }
+  .content-wrapper {
+    padding: 5px 30px;
+  }
 }
 
 /* nav bar */
 .nav-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    background-color: #d1d4e0;
-    justify-content: space-between;
-    padding: 0rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #d1d4e0;
+  justify-content: space-between;
+  padding: 0rem 2rem;
 }
 .nav-wrapper h3 {
   margin: 1rem 0;
   padding: 0.2rem 0 0 0;
-  font-family: 'Norwester', 'sans-serif';
+  font-family: "Norwester", "sans-serif";
   letter-spacing: 0.1rem;
 }
 .nav-wrapper h3 a {
-    text-decoration: none;
-    color: #1a191a;
+  text-decoration: none;
+  color: #1a191a;
 }
 .nav-bar {
-    display: flex;
-    padding: 0;
+  display: flex;
+  padding: 0;
 }
 .nav-bar ul {
-    display: flex;
-    list-style: none; /* Removes the default bullet points */
-    padding-left: 0; /* Removes default padding */
-    margin: 0;
+  display: flex;
+  list-style: none; /* Removes the default bullet points */
+  padding-left: 0; /* Removes default padding */
+  margin: 0;
 }
 .nav-bar ul li {
-    font-family: 'OpenSans', 'sans-serif';
-    font-size: 1.3rem;
-    transition-duration: 250ms;
-    transition-property: background, color;
+  font-family: "OpenSans", "sans-serif";
+  font-size: 1.3rem;
+  transition-duration: 250ms;
+  transition-property: background, color;
 }
 .nav-bar ul li:hover {
-    background: #8a474b;
+  background: #8a474b;
 }
 .nav-bar ul li a {
-    /* By making the link a block item and
+  /* By making the link a block item and
     putting the padding here, I make the whole
     box a clickable link, not just the text. */
-    display: block;
-    padding: 1rem;  
-    color: #413d3f;
-    text-decoration: none;
+  display: block;
+  padding: 1rem;
+  color: #413d3f;
+  text-decoration: none;
 }
 .nav-bar ul li:hover a {
-    color: #f0f1f5;
+  color: #f0f1f5;
 }
-
 
 /* fonts */
 @font-face {
-    font-family: 'Norwester';
-    src: url(../fonts/norwester/norwester.otf) format('opentype');
+  font-family: "Norwester";
+  src: url(../fonts/norwester/norwester.otf) format("opentype");
 }
 
 @font-face {
-    font-family: 'CooperHewitt';
-    src: url(../fonts/cooperhewitt/CooperHewitt-Book.otf) format('opentype');
+  font-family: "CooperHewitt";
+  src: url(../fonts/cooperhewitt/CooperHewitt-Book.otf) format("opentype");
 }
 
 @font-face {
-    font-family: 'OpenSans';
-    src: url(../fonts/open-sans-fontfacekit/webfonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff) format('woff');
+  font-family: "OpenSans";
+  src: url(../fonts/open-sans-fontfacekit/webfonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff)
+    format("woff");
 }
-
-
 
 /* HOME
 --------------------------------------*/
 
 .home {
-    background: url(../images/pexels-eddson-lens-covered.jpg) no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    min-height: 180vh;
-    background-attachment: fixed;
+  background: url(../images/pexels-eddson-lens-covered2.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  min-height: 180vh;
+  background-attachment: fixed;
 }
 
-
 .home .content-wrapper {
-    width: 50vw;
-    position: absolute;
-    bottom: -50vw; /* eyeballing it */
-    left: 25vw; /* (100 - box width) / 2 */
-    background-color: #c2c6d6e6; /* hexadecimal table for opacity https://davidwalsh.name/hex-opacity */
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding: 3rem;
+  width: 50vw;
+  position: absolute;
+  bottom: -50vw; /* eyeballing it */
+  left: 25vw; /* (100 - box width) / 2 */
+  background-color: #c2c6d6e6;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem;
 }
 
 .home .content-wrapper main p {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    margin-top:0;
-    padding-top:0;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .home-content-row1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-shrink: 0;
-    overflow: auto; /* allow the flex container to grow to fit the item*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-shrink: 0;
+  overflow: auto; /* allow the flex container to grow to fit the item*/
 }
 
 .home-content-row2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .home footer {
-    position: absolute;
-    bottom: -120vh; /*viewport height - footer height */
+  position: absolute;
+  bottom: -120vh; /*viewport height - footer height */
 }
 
 .hero-wrapper {
-    margin-top: 15rem;
-    background-color: #d1d4e0e6;
-    height: 20rem;
+  margin: 15rem auto 0 auto;
+  height: 20rem;
+  width: 75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .hero-text {
-    font-family: 'Norwester', 'sans-serif';
-    font-size: 5rem;
-    text-align: center;
-    line-height: 0.9rem;
-    padding-top: 1rem;
+  font-family: "Norwester", "sans-serif";
+  font-size: 5rem;
+  text-align: center;
+  line-height: 0.9rem;
 }
-
-
 
 /* PROJECTS
 --------------------------------------*/
 .header-img {
-    background: url(../images/pexels-eddson-lens.jpg);
-    height: 375px;
-    background-position: 50% 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(../images/pexels-eddson-lens.jpg);
+  height: 375px;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* .projects header::before {
     background: url(../images/pexels-eddson-lens.jpg);
@@ -258,171 +267,170 @@ footer a {
 } */
 
 .projects .content-wrapper {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .project-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-block: 1rem;
 }
 
 .project-item {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    align-items: start;
-    column-gap: 20px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  align-items: start;
+  column-gap: 20px;
 }
 
 @media screen and (max-width: 800px) {
-    .project-item {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .project-item img {
-    width: 100%;
+  width: 100%;
 }
 
 .project-item h3 {
-    margin-top: 0
+  margin-top: 0;
 }
 
 /* RESUME
 --------------------------------------*/
 .header-img {
-    background: url(../images/pexels-eddson-lens.jpg);
-    height: 375px;
-    background-position: 50% 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(../images/pexels-eddson-lens.jpg);
+  height: 375px;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* TODO: ^Make height smaller on smaller screens */
 
 .resume .content-wrapper {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .resume header .content-wrapper {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .resume-section {
-    margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 .resume-section h2 {
-    padding-bottom: 0.5rem;
-    border-bottom: 2px dashed #1c2426;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dashed #1c2426;
 }
 
 .download-link {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    font-size: 1.4rem;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 1400px) {
-    .download-link {
-        position: absolute;
-    }
+  .download-link {
+    position: absolute;
+  }
 }
 
 /* Work Experience
 --------------------------------------*/
 .work-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 1rem;
 }
 
 .work-item {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    column-gap: 20px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  column-gap: 20px;
 }
 
 @media screen and (max-width: 670px) {
-    .work-item {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .work-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .work-item h3 {
-    margin: 0;
+  margin: 0;
 }
 
 .work-item ul {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 /* Education
 --------------------------------------*/
 .education-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-block: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 0.5rem;
 }
 
 /* .education-item {
     line-height: 0.5;
 } */
 .education-item h3 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .education-item p {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
-
 
 /* FOOTER
 --------------------------------------*/
 footer {
-    background: #1c2426;
-    color: #c7cdd0;
-    width: 100vw;
-    height: 60px;
+  background: #1c2426;
+  color: #c7cdd0;
+  width: 100vw;
+  height: 60px;
 }
 
 @media screen and (min-width: 651px) {
-    footer {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 20px;
-    }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 }
 
 @media screen and (max-width: 650px) {
-    footer {
-        text-align: center;
-        padding: 10px;
-    }
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
 }
 
 .socials {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .socials li {
-    display: inline-block;
-    margin-left: 10px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .socials img {
-    width: 32px;
+  width: 32px;
 }
 
 .socials img:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
