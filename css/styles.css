@@ -179,7 +179,7 @@ footer a {
 --------------------------------------*/
 
 .home {
-  background: url(../images/pexels-eddson-lens-covered.jpg) no-repeat;
+  background: url(../images/pexels-eddson-lens-covered2.jpg) no-repeat;
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
@@ -192,12 +192,23 @@ footer a {
   gap: 20rem;
 }
 
-.hero-container {
+/* TODO: Decide between clamp and specified container size*/
+/* .hero-container {
   padding-top: clamp(10rem, 25vw, 20rem);
+} */
+
+.hero-container {
+  margin: 15rem auto 0 auto;
+  height: 20rem;
+  width: 75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 /* TODO: clamp hero text size*/
 .hero-text {
-  background-color: #d1d4e0e6;
+  /* background-color: #d1d4e0e6; */
   font-family: "Norwester", "sans-serif";
   font-size: 5rem;
   text-align: center;
