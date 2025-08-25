@@ -111,8 +111,7 @@ footer a {
 /* nav bar */
 .nav-container {
   display: flex;
-  justify-content: flex-end;
-  background-color: #d1d4e0;
+  background-color: #e0e3eb;
   justify-content: space-between;
   padding: 0rem 2rem;
 }
@@ -200,6 +199,8 @@ footer a {
 .hero-container {
   margin: 15rem auto 0 auto;
   height: 20rem;
+  /* height: clamp(20rem, 25%, 100rem); */
+  /* height: 2000px; */
   width: 75vw;
   display: flex;
   align-items: center;
@@ -208,19 +209,18 @@ footer a {
 
 /* TODO: clamp hero text size*/
 .hero-text {
-  /* background-color: #d1d4e0e6; */
   font-family: "Norwester", "sans-serif";
-  font-size: 5rem;
+  font-size: clamp(3rem, 10vw, 5rem);
   text-align: center;
-  line-height: 0.9rem;
+  line-height: 1.05;
   display: block;
-  width: 100vw;
+  width: 100%;
   padding: 3rem 0;
 }
 
 /* Use an outer container to position the about section */
 .about-outer-container {
-  max-width: 900px;
+  max-width: 1000px;
   padding-bottom: clamp(10rem, 20vw, 25rem);
   display: flex;
   flex-direction: column;
@@ -258,13 +258,7 @@ containing two items */
 
 /* PROJECTS
 --------------------------------------*/
-.header-img {
-  background: url(../images/pexels-eddson-lens.jpg);
-  height: 375px;
-  background-position: 50% 10%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 /* .projects header::before {
     background: url(../images/pexels-eddson-lens.jpg);
     background-position: 50% 10%;
@@ -317,7 +311,7 @@ containing two items */
 /* RESUME
 --------------------------------------*/
 .header-img {
-  background: url(../images/pexels-eddson-lens.jpg);
+  background: url(../images/pexels-eddson-lens-covered.jpg);
   height: 375px;
   background-position: 50% 10%;
   background-repeat: no-repeat;
