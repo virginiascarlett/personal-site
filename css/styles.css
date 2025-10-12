@@ -3,6 +3,7 @@
 
 #1a191a nearly black
 #413d3f very dark gray
+#949db8 medium gray
 #c3c8d7 light gray
 #e0e3eb lighter gray
 #f0f1f5 nearly white
@@ -87,6 +88,7 @@ footer a {
   background: #8a474b;
   color: #f0f1f5;
   text-decoration: none;
+  text-align: center;
   padding: var(--btn-padding);
   border-radius: 4px;
   font-size: 1.3rem;
@@ -289,20 +291,49 @@ containing two items */
 .project-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 10rem;
   padding-block: 1rem;
 }
 
 .project-item {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 1fr 300px;
   align-items: center;
-  column-gap: 50px;
+  /* column-gap: 50px; */
+  border: 0.5rem double #413d3f;
+  background-color: #f0f1f5;
+}
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+.project-item p a {
+  color: #8a474b;
+}
+
+.project-item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  height: auto;
+}
+
+.janelia-image{
+  border: 1px solid #1a191a
+}
+
+
+.project-category-text {
+  font-family: "Open Sans", "sans-serif";
+  font-size: 1rem;
+  color: #949db8;
 }
 
 .project-description {
-  border: 0.5rem double #413d3f;
-  background-color: #f0f1f5;
+  /* border: 0.5rem double #413d3f;
+  background-color: #f0f1f5; */
   padding: 1rem 1rem calc(var(--btn-padding) + 30px) 1rem;
   display: flex;
   flex-direction: column;
@@ -317,6 +348,15 @@ containing two items */
   align-self: center;
 }
 
+.project-description blockquote {
+  margin-top: 0;
+}
+
+/* Target a paragraph that is followed by a blockquote */
+.project-description p:has(+ blockquote) {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 800px) {
   .project-item {
     display: flex;
@@ -325,12 +365,19 @@ containing two items */
   }
 }
 
-.project-item img {
-  width: 100%;
+@media screen and (max-width: 1350px) {
+  .projects .content-wrapper {
+  max-width: 75vw;
+}
 }
 
-.project-item h3 {
-  margin-top: 0;
+@media screen and (max-width: 1049px) {
+  .projects .content-wrapper {
+  max-width: 85vw;
+}
+  .project-item img {
+    max-width: 70%;
+}
 }
 
 /* RESUME
