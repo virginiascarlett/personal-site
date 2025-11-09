@@ -40,15 +40,13 @@ html {
   --btn-padding: 15px;
 }
 
-html,
 body {
-  height: 100%;
-}
-
-body {
+  min-height: 100vh;
   background: #e0e3eb;
   margin: 0;
   font-family: "OpenSans", "sans-serif";
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 h1 {
@@ -193,7 +191,9 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   gap: 20rem;
+  min-height: 400vh;
 }
 
 /* TODO: Decide between clamp and specified container size*/
@@ -226,7 +226,7 @@ footer a {
 /* Use an outer container to position the about section */
 .about-outer-container {
   max-width: 1000px;
-  padding-bottom: clamp(10rem, 20vw, 25rem);
+  /* padding-bottom: clamp(10rem, 20vw, 25rem); */
   display: flex;
   flex-direction: column;
 }
@@ -259,6 +259,25 @@ containing two items */
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+}
+
+.spacer1 {
+  height: clamp(18rem, 15vw, 16rem);
+  width: 100vw;
+}
+
+.contact-container {
+  height: clamp(15rem, 30vw, 40rem);
+  width: 100vw;
+  /* padding-bottom: clamp(10rem, 20vw, 25rem); */
+  background: #413d3f;
+  display: flex;
+  flex-direction: row;
+}
+
+.spacer2 {
+  height: clamp(3rem, 8vw, 10rem);
+  width: 100vw;
 }
 
 /* PROJECTS
