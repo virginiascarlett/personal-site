@@ -298,6 +298,19 @@ containing two items */
     }
 } */
 
+
+.projects .project-grid {
+  display: grid;
+  grid-gap: 40px;
+  /* grid-template-columns: repeat(auto-fill, 400px); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+}
+.projects .project-grid > * {
+  background-color: green;
+  height: 140px;
+}
+
 .projects .content-wrapper {
   margin-top: 1rem;
 }
@@ -305,6 +318,7 @@ containing two items */
 .projects .content-wrapper h1 {
   border-bottom: 0.1rem solid #9c9699;
   padding-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .project-wrapper {
@@ -312,6 +326,7 @@ containing two items */
   flex-direction: column;
   gap: 10rem;
   padding-block: 1rem;
+  padding: 5rem 0 3rem 0;
 }
 
 .project-item {
