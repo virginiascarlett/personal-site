@@ -203,8 +203,8 @@ footer a {
 
 .hero-container {
   margin: 15rem auto 0 auto;
-  height: 20rem;
-  /* height: clamp(20rem, 25%, 100rem); */
+  /* height: 20rem; */
+  height: clamp(10rem, 25vh, 20rem);
   /* height: 2000px; */
   width: 75vw;
   display: flex;
@@ -262,7 +262,7 @@ containing two items */
 }
 
 .spacer1 {
-  height: clamp(18rem, 15vw, 16rem);
+  height: clamp(7rem, 6vw, 15rem);
   width: 100vw;
 }
 
@@ -278,6 +278,52 @@ containing two items */
 .spacer2 {
   height: clamp(3rem, 8vw, 10rem);
   width: 100vw;
+}
+
+.spacer3 {
+  height: clamp(1rem, 4vw, 6rem);
+  width: 100vw;
+}
+
+.scroller-container {
+  display: flex;
+  /* flex-flow: row wrap; */
+  background-color: gray;
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0); /* Start position */
+  }
+  to {
+    transform: translateX(-50%); /* End position (half the content width) */
+  }
+}
+
+.scroller-row {
+  animation: infinite-scroll 10s linear infinite;
+  width: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.scroller-row > * {
+  background-color: green;
+  /* max-width: 200px; */
+  flex: 1 0 auto;
+}
+
+.home-activity {
+  font-size: 5rem;
+  color:#c7cdd0;
+  text-align: center;
+}
+
+.scroller-container:hover .scroller-row {
+  animation-play-state: paused;
 }
 
 /* PROJECTS
