@@ -352,9 +352,14 @@ containing two items */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
 }
-.projects .project-grid > * {
+
+.projects .project-grid button {
   background-color: green;
   height: 140px;
+}
+
+.projects .project-grid button:hover {
+  background-color: lightgreen;
 }
 
 .projects .content-wrapper {
