@@ -26,22 +26,36 @@ class Project {
     this.imgHeight = imgHeight;
   }
   getDescriptionHTML() {
-    // take in an array of strings and
-    // output one string of concatenated paragraphs
-    return this.descriptionArr
-      .map(paragraph => `<p>${paragraph}</p>`)
-      .join('');
-  }
-  getExternalLinkHTML() {
-    // if there is no external link, return an empty string
-    if (!this.externalLink) return '';
 
-    return `
-    <a class="btn" href="${this.externalLink}" target="_blank">
-    "${this.externalLinkText}"
-    </a>
-    `;
-  };
+    return this.descriptionArr.map(contentBlock => {
+      const type = Object.keys(contentBlock)[0]; //key
+      const data = contentBlock[type]; //value
+
+      if (type === 'paragraph') {
+        // data is a string
+        return `<p>${data}</p>`;
+      }
+
+      else if (type === 'button') {
+        // data is an array: [url, text]
+        return `
+          <a class="btn" href="${data[0]}" target="_blank">
+            ${data[1]}
+          </a>`;
+      } 
+      
+      else if (type === 'blockquote') {
+        // data is an array: [quoteString, citeString]
+        return `
+          <blockquote>
+            <p>${data[0]}</p>
+            <cite>${data[1]}</cite>
+          </blockquote>`;
+      }
+      
+    // Concatenate the content blocks
+    }).join('');
+  }
   getFigureHTML() {
     return `
       <figure>
@@ -61,7 +75,6 @@ class Project {
         <p class="project-category-text">${this.projtype} | ${this.year}</p>
         <h3>${this.title}</h3>
           ${this.getDescriptionHTML()}
-          ${this.getExternalLinkHTML()}
       </div>
       ${this.getFigureHTML()}
     </div>

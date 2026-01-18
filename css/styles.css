@@ -347,9 +347,8 @@ containing two items */
 
 .projects .project-grid {
   display: grid;
-  grid-gap: 40px;
-  /* grid-template-columns: repeat(auto-fill, 400px); */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-gap: 40px; */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-content: center;
 }
 
@@ -377,8 +376,8 @@ containing two items */
   flex-direction: column;
   gap: 10rem;
   padding-block: 1rem;
-  padding: 5rem 0 3rem 0;
-  min-width: 1000px;
+  padding: 5rem 30px 3rem 30px;
+  width: 1000px;
 }
 
 .project-showcase {
@@ -388,6 +387,7 @@ containing two items */
   /* column-gap: 50px; */
   border: 0.5rem double #413d3f;
   background-color: #f0f1f5;
+  min-height: 600px;
 }
 
 .project-showcase h3 {
