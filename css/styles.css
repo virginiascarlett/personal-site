@@ -378,9 +378,10 @@ containing two items */
   gap: 10rem;
   padding-block: 1rem;
   padding: 5rem 0 3rem 0;
+  min-width: 1000px;
 }
 
-.project-item {
+.project-showcase {
   display: grid;
   grid-template-columns: 1fr 300px;
   align-items: center;
@@ -389,20 +390,32 @@ containing two items */
   background-color: #f0f1f5;
 }
 
-.project-item h3 {
+.project-showcase h3 {
   margin-top: 0;
 }
 
-.project-item p a {
+.project-showcase p a {
   color: #8a474b;
 }
 
-.project-item img {
+.project-showcase img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 80%;
   height: auto;
+}
+
+.starter-screen {
+  min-height: 600px;
+  border: 0.5rem double #413d3f;
+  background-color: #f0f1f5;
+  text-align: center;
+}
+
+.starter-screen h2 {
+  /* adjust to vertically center text */
+  line-height: 600px;
 }
 
 .janelia-image{
@@ -443,7 +456,7 @@ containing two items */
 }
 
 @media screen and (max-width: 800px) {
-  .project-item {
+  .project-showcase {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -460,7 +473,7 @@ containing two items */
   .projects .content-wrapper {
   max-width: 85vw;
 }
-  .project-item img {
+  .project-showcase img {
     max-width: 70%;
 }
 }
