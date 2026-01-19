@@ -103,6 +103,7 @@ footer a {
   margin: 0 auto;
   padding: 30px;
   max-width: 1000px;
+  width: 100%;
 }
 
 @media screen and (max-width: 651px) {
@@ -345,20 +346,11 @@ containing two items */
 } */
 
 
-.projects .project-grid {
+.projects .project-button-grid {
   display: grid;
-  /* grid-gap: 40px; */
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  justify-content: center;
-}
-
-.projects .project-grid button {
-  background-color: green;
-  height: 140px;
-}
-
-.projects .project-grid button:hover {
-  background-color: lightgreen;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 .projects .content-wrapper {
@@ -377,19 +369,44 @@ containing two items */
   gap: 10rem;
   padding-block: 1rem;
   padding: 5rem 30px 3rem 30px;
-  width: 1000px;
+  max-width: 1000px;
+}
+
+.display-area {
+  display: grid;
+  /* Create one grid cell that holds all the project cards.
+  Only the active card is shown; the rest are invisible.
+  This is crucial for stacking items on the z-axis
+  while also keeping them in the document flow, 
+  ensuring they take up space. All children--the project showcases
+  and the starter screen--need to go in one cell.*/
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 .project-showcase {
+  /* Direct all cards to the first grid cell. If we didn't do this, 
+  new rows would be automatically added. */
+  grid-area: 1 / 1;
+  opacity: 0;
+  pointer-events: none; /* Prevents clicking hidden buttons */
+  transition: opacity 0.3s ease; /* Smooth fade effect! */
+  z-index: 0;
+
   display: grid;
   grid-template-columns: 1fr 300px;
   align-items: center;
-  /* column-gap: 50px; */
   border: 0.5rem double #413d3f;
   background-color: #f0f1f5;
   min-height: 600px;
 }
 
+/* Target the showcase when it has the active class */
+.project-showcase.active {
+  opacity: 1;
+  pointer-events: auto; /* Re-enable clicking */
+  z-index: 1;
+}
 .project-showcase h3 {
   margin-top: 0;
 }
@@ -407,15 +424,13 @@ containing two items */
 }
 
 .starter-screen {
-  min-height: 600px;
+  grid-area: 1 / 1; /* Sit in the first cell */
+  z-index: 0; /* Sit at the bottom */
   border: 0.5rem double #413d3f;
   background-color: #f0f1f5;
   text-align: center;
-}
-
-.starter-screen h2 {
-  /* adjust to vertically center text */
-  line-height: 600px;
+  line-height: 550px;
+  /* TODO: replace this line-height with something more responsive */
 }
 
 .janelia-image{
@@ -423,16 +438,10 @@ containing two items */
 }
 
 
-.project-category-text {
-  font-family: "Open Sans", "sans-serif";
-  font-size: 1rem;
-  color: #949db8;
-}
-
 .project-description {
   /* border: 0.5rem double #413d3f;
   background-color: #f0f1f5; */
-  padding: 1rem 1rem calc(var(--btn-padding) + 30px) 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;

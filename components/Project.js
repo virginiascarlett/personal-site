@@ -3,8 +3,6 @@ class Project {
   // I'm passing an object and telling javascript to unpack it
   // This allows me to use keywords during instantiation
   constructor({
-    projtype,
-    year,
     title,
     descriptionArr,
     externalLink,
@@ -14,8 +12,6 @@ class Project {
     imgWidth,
     imgHeight
   }) {
-    this.projtype = projtype;
-    this.year = year;
     this.title = title;
     this.descriptionArr = descriptionArr;
     this.externalLink = externalLink;
@@ -72,7 +68,6 @@ class Project {
     return `
     <div class="project-showcase">
       <div class="project-description">
-        <p class="project-category-text">${this.projtype} | ${this.year}</p>
         <h3>${this.title}</h3>
           ${this.getDescriptionHTML()}
       </div>

@@ -2,8 +2,8 @@ import Project from "./Project.js";
 
 // ORDER OF PROJECTS MUST MATCH THE ORDER IN THE HTML FILE
 const survey = new Project({
-  projtype: "Survey", 
-  year: "2025", 
+  // projtype: "Survey", 
+  // year: "2025", 
   title: "A multi-campus survey of 295 open source contributors at the University of California", 
   descriptionArr: [
     {
@@ -26,8 +26,8 @@ const survey = new Project({
 });
 
 const hpcTutorial = new Project({
-  projtype: "Tutorial",
-  year: "2024",
+  // projtype: "Tutorial",
+  // year: "2024",
   title: "HPC for Absolute Beginners",
   descriptionArr: [
     {
@@ -50,8 +50,8 @@ const hpcTutorial = new Project({
 })
 
 const disUtilities = new Project({
-  projtype: "Software",
-  year: "2024",
+  // projtype: "Software",
+  // year: "2024",
   title: "DIS utilities: a tool for tracking institutional research outputs",
   descriptionArr: [
     {
@@ -71,8 +71,8 @@ const disUtilities = new Project({
 });
 
 const dataReport = new Project({
-  projtype: "Internal Report",
-  year: "2024",
+  // projtype: "Internal Report",
+  // year: "2024",
   title: "Distributing discovery: a qualitative survey of Janelia's data culture, and a plan for action",
   descriptionArr: [
     {
