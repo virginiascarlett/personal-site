@@ -195,7 +195,7 @@ footer a {
   align-items: center;
   justify-content: space-around;
   gap: 20rem;
-  min-height: 400vh;
+  /* min-height: 100vh; */
 }
 
 /* TODO: Decide between clamp and specified container size*/
@@ -219,10 +219,14 @@ footer a {
   font-family: "Norwester", "sans-serif";
   font-size: clamp(3rem, 10vw, 5rem);
   text-align: center;
-  line-height: 1.05;
+  /* line-height: 1.05; */
   display: block;
   width: 100%;
-  padding: 3rem 0;
+  padding: 0;
+}
+
+.subtitle-text {
+  
 }
 
 /* Use an outer container to position the about section */
@@ -242,7 +246,7 @@ containing two items */
   flex-direction: column;
   gap: 3rem;
   opacity: 0;
-  transition: opacity 1s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .about-inner-container p {
@@ -267,30 +271,6 @@ containing two items */
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-}
-
-.spacer1 {
-  height: clamp(7rem, 6vw, 15rem);
-  width: 100vw;
-}
-
-.contact-container {
-  height: clamp(15rem, 30vw, 40rem);
-  width: 100vw;
-  /* padding-bottom: clamp(10rem, 20vw, 25rem); */
-  background: #413d3f;
-  display: flex;
-  flex-direction: row;
-}
-
-.spacer2 {
-  height: clamp(3rem, 8vw, 10rem);
-  width: 100vw;
-}
-
-.spacer3 {
-  height: clamp(1rem, 4vw, 6rem);
-  width: 100vw;
 }
 
 .scroller-container {

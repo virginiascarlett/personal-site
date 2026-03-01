@@ -1,6 +1,6 @@
 // options tell the observer when to fire
 const options = {
-  threshold: 0.5 // fire when 50% of the element is visible
+  threshold: 0.1 // fire when x% of the element is visible
 };
 
 // callback function is the thing you do when the observer is triggered
