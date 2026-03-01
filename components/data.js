@@ -80,7 +80,7 @@ const dataReport = new Project({
     }, 
     {
       blockquote: [
-        "It's not just anyone who will take on the Sisyphean task of understanding and documenting the data management behaviors of an entire institution, but even fewer will do it in a way that creates something genuinely useful. It's two years old now, and I still find myself regularly referencing Virginia's 'Discovery' report when I want to gain some insight on approaches to open data at Janelia.",
+        "\"It's not just anyone who will take on the Sisyphean task of understanding and documenting the data management behaviors of an entire institution, but even fewer will do it in a way that creates something genuinely useful. It's two years old now, and I still find myself regularly referencing Virginia's 'Discovery' report when I want to gain some insight on approaches to open data at Janelia.\"",
         "-Michelle Avissar-Whiting, Director of Open Science Strategy at HHMI"
       ]
     }

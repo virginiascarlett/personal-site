@@ -195,39 +195,47 @@ footer a {
   align-items: center;
   justify-content: space-around;
   gap: 20rem;
-  /* min-height: 100vh; */
+  /* max-height: 100vh; */
+  flex-grow: 1; /* Allows the main content to take up all remaining vertical space */
 }
 
-/* TODO: Decide between clamp and specified container size*/
-/* .hero-container {
-  padding-top: clamp(10rem, 25vw, 20rem);
-} */
 
 .hero-container {
-  margin: 15rem auto 0 auto;
-  /* height: 20rem; */
+  margin: 10rem auto 0 auto;
   height: clamp(10rem, 25vh, 20rem);
-  /* height: 2000px; */
   width: 75vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.spacer1 {
+  width: 150vw;
+}
 
-/* TODO: clamp hero text size*/
+.homebody {
+  font-family: "OpenSans", "sans-serif";
+  font-size: 1.3rem;
+}
+
 .hero-text {
+  background-color: #f0f1f5b3;
+  padding: 25px;
+  /* X-offset, Y-offset, Blur, Spread, Color */
+  box-shadow: 0px 0px 30px 15px #f0f1f5b3;
+  
+  /* round the sharp corners */
+  border-radius: 7px;
+}
+
+
+/* .hero-text {
   font-family: "Norwester", "sans-serif";
   font-size: clamp(3rem, 10vw, 5rem);
   text-align: center;
-  /* line-height: 1.05; */
   display: block;
   width: 100%;
   padding: 0;
-}
-
-.subtitle-text {
-  
-}
+} */
 
 /* Use an outer container to position the about section */
 .about-outer-container {
