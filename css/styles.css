@@ -40,6 +40,11 @@ html {
   --btn-padding: 15px;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   min-height: 100vh;
   background: #e0e3eb;
@@ -75,7 +80,7 @@ h2 {
 
 h3 {
   font-family: "CooperHewitt", "sans-serif";
-  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
 }
 
 footer a {
@@ -88,15 +93,18 @@ footer a {
   text-decoration: none;
   text-align: center;
   padding: var(--btn-padding);
+  border: 1px solid transparent;
   border-radius: 4px;
   font-size: clamp(1rem, 1.5vw, 1.3rem);
   line-height: 2rem;
   transition-duration: 250ms;
-  transition-property: background, color;
+  transition-property: background, color, border-color;
 }
+
 .btn:hover {
   background: #f0f1f5;
   color: #8a474b;
+  border-color: #413d3f;
   cursor: pointer;
 }
 
@@ -130,6 +138,20 @@ footer a {
   text-decoration: none;
   color: #1a191a;
 }
+
+@media screen and (max-width: 480px) {
+  .nav-container h3 {
+    display: none;
+  }
+  .nav-container {
+    justify-content: center;
+    padding: 0;
+  }
+  .nav-bar ul li a {
+    padding: 1rem 0.5rem;
+  }
+}
+
 .nav-bar {
   display: flex;
   padding: 0;
@@ -199,7 +221,7 @@ footer a {
 .hero-container {
   margin: 0 auto;
   min-height: clamp(10rem, 25vh, 20rem);
-  width: clamp(75vw, 90%, 90vw);
+  width: 90%;
   max-width: 1400px;
   display: flex;
   align-items: center;
@@ -224,7 +246,7 @@ footer a {
 }
 .hero-text p {
   font-family: "OpenSans", "sans-serif";
-  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
 }
 
 .hero-text h1 {
@@ -248,11 +270,30 @@ footer a {
   border-radius: 7px;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
 .hero-text .btn {
   align-self: center;
   margin-top: 1.5rem; /* Add some space above the button */
+}
+
+@media screen and (max-width: 925px) {
+  .hero-container {
+    flex-direction: column;
+    min-height: auto;
+    gap: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom: 6.5rem;
+  }
+
+  .hero-image {
+    max-width: 350px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
 }
 
 
@@ -616,28 +657,26 @@ containing two items */
 footer {
   background: #1c2426;
   color: #c7cdd0;
-  width: 100vw;
-  height: 60px;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
 }
 
 @media screen and (min-width: 651px) {
   footer {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  footer {
-    text-align: center;
-    padding: 10px;
   }
 }
 
 .socials {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .socials li {
