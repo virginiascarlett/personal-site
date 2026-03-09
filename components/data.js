@@ -34,9 +34,6 @@ const hpcTutorial = new Project({
       "paragraph": "While many universities and national labs have excellent documentation for their compute clusters, that documentation almost universally assumes that the reader has some foundational computing knowledge. I wrote this accessible introduction to high-performance computing for researchers with no background in computer science.",
     },
     {
-    "paragraph": "Some colleagues at the UC Davis compute cluster liked it so much, they adapted it and incorporated it into their own documentation!"
-    },
-    {
       "button": [
         "https://medium.com/@virginia.t.scarlett/hpc-for-absolute-beginners-47a6574e8830",
         "Read the tutorial"
@@ -85,10 +82,11 @@ const dataReport = new Project({
       ]
     }
   ],
-  imgSrc: "images/janelia_report_cover.png",
-  imgAltText: "A picture of the cover of a report entitled Distributing Discovery by Virginia Scarlett",
-  imgWidth: 652,
-  imgHeight: 844
+  imgSrc: "images/janelia_report_cover.png", 
+  imgAltText: "A picture of the cover of a report entitled Distributing Discovery by Virginia Scarlett", 
+  imgWidth: 652, 
+  imgHeight: 844,
+  imgCustomClass: "janelia-image"
 });
 
 const projectObjectArray = [survey, hpcTutorial, disUtilities, dataReport];

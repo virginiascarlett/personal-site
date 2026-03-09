@@ -10,7 +10,8 @@ class Project {
     imgSrc,
     imgAltText,
     imgWidth,
-    imgHeight
+    imgHeight,
+    imgCustomClass = ""
   }) {
     this.title = title;
     this.descriptionArr = descriptionArr;
@@ -20,6 +21,7 @@ class Project {
     this.imgAltText = imgAltText;
     this.imgWidth = imgWidth;
     this.imgHeight = imgHeight;
+    this.imgCustomClass = imgCustomClass;
   }
   getDescriptionHTML() {
 
@@ -60,6 +62,7 @@ class Project {
           alt="${this.imgAltText}" 
           width="${this.imgWidth}" 
           height="${this.imgHeight}"
+          class="${this.imgCustomClass}"
         >
       </figure>
     `;

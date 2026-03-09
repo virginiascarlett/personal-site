@@ -95,7 +95,7 @@ footer a {
   padding: var(--btn-padding);
   border: 1px solid transparent;
   border-radius: 4px;
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
   line-height: 2rem;
   transition-duration: 250ms;
   transition-property: background, color, border-color;
@@ -431,7 +431,7 @@ containing two items */
   flex-direction: column;
   gap: 10rem;
   padding-block: 1rem;
-  padding: 5rem 30px 3rem 30px;
+  padding: 5rem 0 3rem 0;
   max-width: 1000px;
 }
 
@@ -496,6 +496,10 @@ containing two items */
   /* TODO: replace this line-height with something more responsive */
 }
 
+.starter-screen h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+}
+
 .janelia-image{
   border: 1px solid #1a191a
 }
@@ -508,6 +512,7 @@ containing two items */
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
 }
 
 .project-description h3 {
@@ -527,24 +532,30 @@ containing two items */
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .project-showcase {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: center;
     gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .project-showcase figure {
+    margin: 0;
+  }
+
+  .project-description {
+    font-size: 1.2rem;
+  }
+
+  .project-description h3,
+  .starter-screen h2 {
+    font-size: 1.8rem;
   }
 }
 
-@media screen and (max-width: 1350px) {
-  .projects .content-wrapper {
-  max-width: 75vw;
-}
-}
-
 @media screen and (max-width: 1049px) {
-  .projects .content-wrapper {
-  max-width: 85vw;
-}
   .project-showcase img {
     max-width: 70%;
 }
