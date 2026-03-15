@@ -18,8 +18,8 @@ const survey = new Project({
 ], 
   imgSrc: "images/infographic-crop.png", 
   imgAltText: "preview of an infographic describing the 2025 UC OSPO survey, with bold percentages and modern abstract people", 
-  imgWidth: 298, 
-  imgHeight: 534
+  imgWidth: 300, 
+  imgHeight: 450
 });
 
 const hpcTutorial = new Project({
@@ -40,7 +40,7 @@ const hpcTutorial = new Project({
   imgSrc: "images/hpc2-crop.png",
   imgAltText: "A picture of server racks in a data center",
   imgWidth: 300,
-  imgHeight: 400
+  imgHeight: 450
 })
 
 const disUtilities = new Project({
@@ -58,10 +58,10 @@ const disUtilities = new Project({
       ] 
     }
   ],
-  imgSrc: "images/DIS_architecture_crop.png",
+  imgSrc: "images/altumcode_unsplash_900.jpg",
   imgAltText: "A software architecture diagram showing logos for various research sharing platforms, such as bioarchive and figshare, flowing into some python scripts",
-  imgWidth: 838,
-  imgHeight: 900
+  imgWidth: 300,
+  imgHeight: 450
 });
 
 const dataReport = new Project({
@@ -81,8 +81,8 @@ const dataReport = new Project({
   ],
   imgSrc: "images/janelia_report_cover.png", 
   imgAltText: "A picture of the cover of a report entitled Distributing Discovery by Virginia Scarlett", 
-  imgWidth: 652, 
-  imgHeight: 844,
+  imgWidth: 300, 
+  imgHeight: 450,
   imgCustomClass: "janelia-image"
 });
 
@@ -103,7 +103,7 @@ const plantBio = new Project({
   imgSrc: "images/brachy.png",
   imgAltText: "A picture of a grass in a pot against a black background",
   imgWidth: 300,
-  imgHeight: 400
+  imgHeight: 450
 })
 
 const projectObjectArray = [survey, hpcTutorial, disUtilities, dataReport, plantBio];

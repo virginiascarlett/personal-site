@@ -38,6 +38,8 @@ html {
 :root {
   --very-light-gray: #e0e3eb;
   --btn-padding: 15px;
+  --proj-display-color: #f2f2f2;
+  --proj-display-border-color: #9c9699;
 }
 
 html, body {
@@ -411,9 +413,14 @@ containing two items */
 
 .projects .project-button-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   justify-content: space-between;
+}
+
+.project-button-grid .btn {
+  width: clamp(300px, 100%, 380px);
+  justify-self: center;
 }
 
 .projects .content-wrapper {
@@ -421,7 +428,7 @@ containing two items */
 }
 
 .projects .content-wrapper h1 {
-  border-bottom: 0.1rem solid #9c9699;
+  border-bottom: 0.1rem solid var(--proj-display-border-color);
   padding-bottom: 2rem;
   margin-bottom: 0;
 }
@@ -459,8 +466,8 @@ containing two items */
   display: grid;
   grid-template-columns: 1fr 300px;
   align-items: center;
-  border: 0.5rem double #413d3f;
-  background-color: #f0f1f5;
+  border: 0.5rem double var(--proj-display-border-color);
+  background-color: var(--proj-display-color);
   min-height: 600px;
 }
 
@@ -475,7 +482,7 @@ containing two items */
 }
 
 .project-showcase p a {
-  color: #8a474b;
+  color: var(--proj-display-color);
 }
 
 .project-showcase img {
@@ -489,30 +496,44 @@ containing two items */
 .starter-screen {
   grid-area: 1 / 1; /* Sit in the first cell */
   z-index: 0; /* Sit at the bottom */
-  border: 0.5rem double #413d3f;
-  background-color: #f0f1f5;
+  border: 0.5rem double var(--proj-display-border-color);
+  background-color: var(--proj-display-color);
   text-align: center;
-  line-height: 550px;
-  /* TODO: replace this line-height with something more responsive */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 600px;
 }
 
 .starter-screen h2 {
-  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+  font-size: clamp(2.75rem, 5vw, 3.75rem);
+  line-height: 1.2;
+}
+
+figure {
+  margin: 0;
 }
 
 .janelia-image{
-  border: 1px solid #1a191a
+  /* Using box-shadow instead of border to avoid sub-pixel rendering issues where edges might disappear */
+  box-shadow: 0 0 0 1px #1a191a;
+  /* Add a tiny bit of padding to ensure the box-shadow isn't clipped by the container */
+  margin: 1px;
+  position: relative;
+  z-index: 1;
 }
 
 
 .project-description {
-  /* border: 0.5rem double #413d3f;
-  background-color: #f0f1f5; */
-  padding: 1rem 1rem 1rem 1rem;
+  /* border: 0.5rem double #413d3f; */
+  background-color: var(--proj-display-color);
+  padding: 1rem 1rem 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
 }
 
 .project-description h3 {
@@ -549,8 +570,7 @@ containing two items */
     font-size: 1.2rem;
   }
 
-  .project-description h3,
-  .starter-screen h2 {
+  .project-description h3 {
     font-size: 1.8rem;
   }
 }
