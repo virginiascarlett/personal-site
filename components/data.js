@@ -7,20 +7,17 @@ const survey = new Project({
   title: "A multi-campus survey of 295 open source contributors at the University of California", 
   descriptionArr: [
     {
-      "paragraph": "In my role at the UC Santa Barbara Library, a member of the UC OSPO Network, I led a multi-campus survey of nearly 300 open source contributors affiliated with the University of California (UC). This is the first in-depth survey of open source contributor needs from the perspective of university support staff.",
+      "paragraph": "Working for UC Santa Barbara and the UC OSPO Network, I spearheaded a multi-campus survey of open source contributors affiliated with the University of California. The first in-depth analysis of open source contributor needs from a university support staff perspective, this project generated actionable insights, a reusable dataset, a scholarly paper, and an accessible infographic.",
     },
-    {
-    "paragraph": "In addition to making the data available, we have submitted a scholarly article for peer review (preprint already available on SocArxiv)."
-  },
   {
     "button": [
-      "https://github.com/UC-OSPO-Network/ospo-survey-analysis",
-      "Follow the project on GitHub"
+      "https://ucospo.net/oss-resources/survey/",
+      "Go to the survey website"
     ]
   }
 ], 
-  imgSrc: "images/uc-ospo-logo.png", 
-  imgAltText: "logo for the UC OSPO Network, which consists of abstract shapes resembling a person moving forward", 
+  imgSrc: "images/infographic-crop.png", 
+  imgAltText: "preview of an infographic describing the 2025 UC OSPO survey, with bold percentages and modern abstract people", 
   imgWidth: 298, 
   imgHeight: 534
 });
@@ -31,7 +28,7 @@ const hpcTutorial = new Project({
   title: "HPC for Absolute Beginners",
   descriptionArr: [
     {
-      "paragraph": "While many universities and national labs have excellent documentation for their compute clusters, that documentation almost universally assumes that the reader has some foundational computing knowledge. I wrote this accessible introduction to high-performance computing for researchers with no background in computer science.",
+      "paragraph": "Most compute cluster documentation assumes prior computing knowledge, creating a barrier to entry for many scientists. To bridge this gap, I authored an accessible introduction to high-performance computing (HPC) for researchers without a computer science background. It was so popular among junior scientists at my institute that I adapted it for the public and published it on Medium.",
     },
     {
       "button": [
@@ -40,7 +37,7 @@ const hpcTutorial = new Project({
       ]
     }
 ],
-  imgSrc: "images/pexels-brett-sayles-crop_copy.jpg",
+  imgSrc: "images/hpc2-crop.png",
   imgAltText: "A picture of server racks in a data center",
   imgWidth: 300,
   imgHeight: 400
@@ -52,7 +49,7 @@ const disUtilities = new Project({
   title: "DIS utilities: a tool for tracking institutional research outputs",
   descriptionArr: [
     {
-      paragraph: "While at the Howard Hughes Medical Institute's Janelia Research Campus, I helped design a software pipeline for automatically tracking articles and datasets produced by researchers at our institute. Found works are automatically added to a MongoDB database, and can be curated through a user-friendly Flask application. It's a bespoke tool that was never designed to be used outside of Janelia, but it served our purposes, and it's still in use at Janelia today."
+      paragraph: "At HHMI's Janelia Research Campus, I led product management for an automated software pipeline that discovers new Janelia publications. This tool pulls researcher articles from the web into a MongoDB database for curation via a custom Flask application, saving the library over 150 hours of manual discovery and curation annually. More importantly, it fosters collaboration by keeping scientists informed of their colleagues’ latest discoveries."
     }, 
     {
       button: [
@@ -73,11 +70,11 @@ const dataReport = new Project({
   title: "Distributing discovery: a qualitative survey of Janelia's data culture, and a plan for action",
   descriptionArr: [
     {
-      paragraph: "In my role at the Howard Hughes Medical Institute's Janelia Research Campus, I interviewed 60 scientists about their data management needs. I summarized this qualitative survey in an internal report and multiple talks. This project helped catalyze a reorganization of the Janelia Library."
+      paragraph: "At HHMI's Janelia Research Campus, I interviewed 60 scientists to assess their data management needs, synthesizing the findings into an internal report and several presentations. This research catalyzed a strategic reorganization of the Janelia Library."
     }, 
     {
       blockquote: [
-        "\"It's not just anyone who will take on the Sisyphean task of understanding and documenting the data management behaviors of an entire institution, but even fewer will do it in a way that creates something genuinely useful. It's two years old now, and I still find myself regularly referencing Virginia's 'Discovery' report when I want to gain some insight on approaches to open data at Janelia.\"",
+        "\"I still find myself regularly referencing Virginia's 'Discovery' report when I want to gain some insight on approaches to open data at Janelia.\"",
         "-Michelle Avissar-Whiting, Director of Open Science Strategy at HHMI"
       ]
     }
@@ -89,7 +86,27 @@ const dataReport = new Project({
   imgCustomClass: "janelia-image"
 });
 
-const projectObjectArray = [survey, hpcTutorial, disUtilities, dataReport];
+
+const plantBio = new Project({
+  title: "Original plant biology research",
+  descriptionArr: [
+    {
+      "paragraph": "I built my foundational research skills as a plant biologist. My early research was in the wet lab, investigating plant circadian rhythms and, later, cell wall composition for biofuels. During my PhD, I transitioned to computational experiments, using a biofuel model grass to weigh in on a long-standing debate about plant genetics. I was an NSF GRFP Fellow, mentored several students, and co-authored four papers.",
+    },
+    {
+      "button": [
+        "https://orcid.org/0000-0002-4156-2849",
+        "View my CV on ORCID"
+      ]
+    }
+],
+  imgSrc: "images/brachy.png",
+  imgAltText: "A picture of a grass in a pot against a black background",
+  imgWidth: 300,
+  imgHeight: 400
+})
+
+const projectObjectArray = [survey, hpcTutorial, disUtilities, dataReport, plantBio];
 
 // Export the array to be used in other files
 export default projectObjectArray;
