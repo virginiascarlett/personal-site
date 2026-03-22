@@ -7,7 +7,7 @@ const survey = new Project({
   title: "A multi-campus survey of 295 open source contributors at the University of California", 
   descriptionArr: [
     {
-      "paragraph": "Working for UC Santa Barbara and the UC OSPO Network, I spearheaded a multi-campus survey of open source contributors affiliated with the University of California. The first in-depth analysis of open source contributor needs from a university support staff perspective, this project generated actionable insights, a reusable dataset, a scholarly paper, and an accessible infographic.",
+      "paragraph": "Working for UC Santa Barbara and the UC OSPO Network, I spearheaded a multi-campus survey of open source contributors affiliated with the University of California. The first in-depth analysis of open source contributor needs from a university support staff perspective, this project uncovered a widespread struggle with project sustainability, making sustainability a key strategic direction for our program.",
     },
   {
     "button": [
