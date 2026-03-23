@@ -734,3 +734,48 @@ footer {
 .socials img:hover {
   opacity: 0.5;
 }
+
+/* SERVICES
+--------------------------------------*/
+.services-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.services-grid img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .services-grid img {
+    max-width: 300px;
+  }
+}
+
+.services-grid p {
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem)
+}
+
+.contact-callout {
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.contact-callout p {
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-callout p {
+    font-size: 1.2rem;
+  }
+}
