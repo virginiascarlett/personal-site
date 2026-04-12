@@ -4,7 +4,7 @@ import Project from "./Project.js";
 const survey = new Project({
   // projtype: "Survey", 
   // year: "2025", 
-  title: "A multi-campus survey of 295 open source contributors at the University of California", 
+  title: "A multi-campus survey of open source contributors at the University of California", 
   descriptionArr: [
     {
       "paragraph": "Working for UC Santa Barbara and the UC OSPO Network, I spearheaded a multi-campus survey of open source contributors affiliated with the University of California. The first in-depth analysis of open source contributor needs from a university support staff perspective, this project uncovered a widespread struggle with project sustainability, making sustainability a key strategic direction for our program.",
@@ -91,7 +91,7 @@ const plantBio = new Project({
   title: "Original plant biology research",
   descriptionArr: [
     {
-      "paragraph": "I built my foundational research skills as a plant biologist. My early research was in the wet lab, investigating plant circadian rhythms and, later, cell wall composition for biofuels. During my PhD, I transitioned to computational experiments, using a biofuel model grass to weigh in on a long-standing debate about plant genetics. I was an NSF GRFP Fellow, mentored several students, and co-authored four papers.",
+      "paragraph": "I built my foundational research skills as a plant biologist. My early research was in the wet lab, investigating plant circadian rhythms and, later, cell wall composition for biofuels. During my PhD, I transitioned to bioinformatics, using a biofuel model grass to weigh in on a long-standing debate about plant genetics. I was an NSF GRFP Fellow, mentored three students, and co-authored four papers.",
     },
     {
       "button": [
