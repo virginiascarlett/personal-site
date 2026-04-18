@@ -222,8 +222,8 @@ footer a {
 
 .home {
   background-image: url(../images/pexels-eddson-lens-covered-mobile.webp);
-  background-size: contain;
-  background-position: bottom;
+  background-size: 100% 100%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
