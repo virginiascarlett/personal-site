@@ -222,7 +222,7 @@ footer a {
 
 .home {
   background-image: url(../images/pexels-eddson-lens-covered-mobile.webp);
-  background-size: cover;
+  background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat;
 }
@@ -230,12 +230,14 @@ footer a {
 @media (min-width: 768px) {
   .home {
     background-image: url(../images/pexels-eddson-lens-covered-medium.webp);
+    background-size: cover;
   }
 }
 
 @media (min-width: 1200px) {
   .home {
     background-image: url(../images/pexels-eddson-lens-covered-large.webp);
+    background-size: cover;
   }
 }
 
