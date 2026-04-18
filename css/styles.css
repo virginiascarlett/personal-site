@@ -132,7 +132,7 @@ footer a {
 /* 'Banner' image for pages other than the homepage */
 .header-img {
   background-image: url(../images/pexels-eddson-lens-semicovered-small.webp);
-  height: 375px;
+  height: 200px;
   background-position: 50% 10%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -140,12 +140,14 @@ footer a {
 @media (min-width: 768px) {
   .header-img {
     background-image: url(../images/pexels-eddson-lens-semicovered-medium.webp);
+    height: 275px;
   }
 }
 
 @media (min-width: 1200px) {
   .header-img {
     background-image: url(../images/pexels-eddson-lens-semicovered-large.webp);
+    height: 375px;
   }
 }
 
@@ -315,6 +317,7 @@ footer a {
   }
 
   .hero-image {
+    width: 60%; 
     max-width: 350px;
   }
 
