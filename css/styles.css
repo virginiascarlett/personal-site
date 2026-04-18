@@ -467,10 +467,20 @@ containing two items */
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* For phones, the instructional text appears in the top of the box */
+  justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem 2rem;
   min-height: 600px;
+}
+
+/* For tablets and computers, the instructional text appears in the center of the box */
+@media (min-width: 768px) {
+  .starter-screen {
+    justify-content: center;
+    /* Less top padding is needed here compared to phones */
+    padding: 2rem; 
+  }
 }
 
 .starter-screen h2 {
