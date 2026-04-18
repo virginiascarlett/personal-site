@@ -131,7 +131,7 @@ footer a {
 
 /* 'Banner' image for pages other than the homepage */
 .header-img {
-  background-image: url(../images/pexels-eddson-lens-covered-mobile.webp);
+  background-image: url(../images/pexels-eddson-lens-covered-small.webp);
   height: 200px;
   background-position: 50% 10%;
   background-repeat: no-repeat;
@@ -221,7 +221,7 @@ footer a {
 --------------------------------------*/
 
 .home {
-  background-image: url(../images/pexels-eddson-lens-covered-small.webp);
+  background-image: url(../images/pexels-eddson-lens-covered-mobile.webp);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
