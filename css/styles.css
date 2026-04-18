@@ -129,6 +129,15 @@ footer a {
   color: var(--gray4);
 }
 
+/* 'Banner' image for pages other than the homepage */
+.header-img {
+  background: url(../images/pexels-eddson-lens-covered.jpg);
+  height: 375px;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* NAV BAR
 --------------------------------------*/
 
