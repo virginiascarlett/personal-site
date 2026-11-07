@@ -32,42 +32,83 @@
         </div>
     </header>
 
-    <main class="content-wrapper">
+    <!--role "tablist" tells the screen reader that this container holds a group of tabs-->
+    <main class="content-wrapper" role="tablist" aria-label="Portfolio Projects">
         <div class="project-button-grid">
-            <button class="btn" data-project-id="0">OSPO Survey 2025</button>
-            <button class="btn" data-project-id="1">HPC Tutorial 2024</button>
-            <button class="btn" data-project-id="2">DIS Software 2024</button>
-            <button class="btn" data-project-id="3">Janelia Survey 2024</button>
-            <button class="btn" data-project-id="4">Plant Biology 2012-2022</button>
+            <button 
+                class="btn"
+                role="tab"
+                id="tab-0"
+                aria-controls="project-panel"
+                aria-selected="false"
+                data-project-id="0">
+                OSPO Survey 2025
+            </button>
+            <button
+                class="btn"
+                role="tab"
+                id="tab-1"
+                aria-controls="project-panel"
+                aria-selected="false"
+                data-project-id="1">
+                HPC Tutorial 2024
+            </button>
+            <button
+                class="btn"
+                role="tab"
+                id="tab-2"
+                aria-controls="project-panel"
+                aria-selected="false"
+                data-project-id="2">
+                DIS Software 2024</button>
+            <button
+                class="btn"
+                role="tab"
+                id="tab-3"
+                aria-controls="project-panel"
+                aria-selected="false"
+                data-project-id="3">
+                Janelia Survey 2024
+            </button>
+            <button
+                class="btn"
+                role="tab"
+                id="tab-4"
+                aria-controls="project-panel"
+                aria-selected="false"
+                data-project-id="4">
+                Plant Biology 2012-2022
+            </button>
         </div>
         <!-- //  PROJECTS  // -->
-            <div class="project-wrapper">
-                <div class="display-area">
-                    <div class="starter-screen">
-                        <h2>Click on a project to learn more!</h2>
-                    </div>
+        <div class="project-wrapper">
+            <!--role "tabpanel" tells the screen reader this is the content area controlled by the tabs-->
+            <div class="display-area" role="tabpanel" id="project-panel" aria-live="polite">
+                <div class="starter-screen">
+                    <h2>Click on a project to learn more!</h2>
                 </div>
             </div>
+        </div>
     </main>
 
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
     <footer>
-    <p>© 2025 by Virginia Scarlett</p>
+        <p>© 2025 by Virginia Scarlett</p>
 
-    <ul class="socials">
-      <li>
-        <a href="mailto:virginiascarlett@ucsb.edu" target="_blank"><img src="images/envelope-white.png"
-            alt="Email me at virginiascarlett@ucsb.edu"></a>
-      </li>
-      <li>
-        <a href="https://github.com/virginiascarlett" target="_blank"><img src="images/github-white.png"
-            alt="My GitHub profile"></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/virginia-t-scarlett/" target="_blank"><img
-            src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
-      </li>
-    </ul>
+        <ul class="socials">
+            <li>
+                <a href="mailto:virginiascarlett@ucsb.edu" target="_blank"><img src="images/envelope-white.png"
+                        alt="Email me at virginiascarlett@ucsb.edu"></a>
+            </li>
+            <li>
+                <a href="https://github.com/virginiascarlett" target="_blank"><img src="images/github-white.png"
+                        alt="My GitHub profile"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/virginia-t-scarlett/" target="_blank"><img
+                        src="images/icon-logo-linkedin.png" alt="My LinkedIn profile"></a>
+            </li>
+        </ul>
 
     </footer>
 </body>
